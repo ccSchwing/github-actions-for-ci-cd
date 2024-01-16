@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         ## cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/Ch02/02_03_ci_for_javascript/package-lock.json'
-        cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/github-actions-for-ci-cd/package.json'
+        cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/github-actions-for-ci-cd/package-lock.json'
     - name: Get npm cache dir
       id: npm-cache-dir
       shell: bash
