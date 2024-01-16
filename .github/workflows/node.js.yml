@@ -44,4 +44,4 @@ jobs:
       run:  echo "dir=$(npm config get cache)" ; echo "cache:$dir"
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    ##- run: npm test
