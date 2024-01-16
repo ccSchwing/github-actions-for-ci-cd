@@ -24,14 +24,14 @@ jobs:
     - name: Find the friggin package-lock.json file
       id: find-lock-file
       shell: bash
-      run: cd / ; find . -name package-lock.json -exec ls -l {} \;
+      run: cd /home/runner ; find . -name package-lock.json -exec ls -l {} \;
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         ## cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/Ch02/02_03_ci_for_javascript/package-lock.json'
-        cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/github-actions-for-ci-cd/package-lock.json'
+        cache-dependency-path: '/home/runner/work/github-actions-for-ci-cd/github-actions-for-ci-cd'
     - name: Get npm cache dir
       id: npm-cache-dir
       shell: bash
