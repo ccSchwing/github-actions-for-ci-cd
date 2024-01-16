@@ -28,7 +28,7 @@ jobs:
     - name: Find the friggin package.json file
       id: find-package-file
       shell: bash
-      run: cd /home/runner ; find . -name package.json -exec ls -l {} \;
+      run: cd /home/runner/work ; find . -name package.json -exec ls -l {} \;
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
